@@ -1,66 +1,71 @@
 <html>
-
 <head>
+<title>GarageBand from Squidly</title>
 <style>
 hr{
   border: none;
-  height: 1px;
+  height: 2px;
   background-color: #aaa;
   width: 350px;
   margin-left:0;
   }
-audio:hover {background-color:#fff;}
+audio:hover{background-color:#0f0;}
 body {background:rgb(216,216,216);
 
 </style>
 </head>
 <body>
 
-<H1>What this is & QR Code to Amazon book</H1>
+<h1>Sound files for "GarageBand"</h1>
 
-<p>Alkjhasf skdjfh skjdh fksjh df Alkjhasf skdjfh skjdh fksjh df Alkjhasf skdjfh skjdh fksjh df Alkjhasf skdjfh skjdh fksjh df Alkjhasf skdjfh skjdh fksjh df Alkjhasf skdjfh skjdh fksjh df.</p>
+<p>From the music chapter of <a href="https://www.amazon.com/Squidly-Travesties-Literature-Jeff-Morin/dp/B0BMWKTNQK" ><i>Squidly<i>, available on Amazon.</a></p>
+
+<p>&nbsp;</p>
 
 <audio>
  Your browser can't play these files. Use the link to download.
 </audio>
 
-<p><strong>I Think I Club You</strong></p>
+<p><strong>I Think I Club You</strong><BR />
 <audio controls>
   <source src="I Think I Club You.mp3" type="audio/mpeg">
 </audio><BR/>
-File download: <a href="I Think I Club You.mp3">I Think I Club You.mp3</a> (8.4 MB)<p>
+File download: <a href="I Think I Club You.mp3">I Think I Club You.mp3</a> (8.4 MB)</p>
 
 <hr>
 
-<p><strong>Voi Club Sapete</strong></p>
+<p><strong>Voi Club Sapete</strong><BR />
 <audio controls>
   <source src="Voi Club Sapete.mp3" type="audio/mpeg">
 </audio><BR/>
-File download: <a href="Voi Club Sapete.mp3">Voi Club Sapete.mp3</a> (10.5 MB)<p>
+File download: <a href="Voi Club Sapete.mp3">Voi Club Sapete.mp3</a> (10.5 MB)</p>
 
 <hr>
 
-<p><strong>Hodie</strong></p>
+<p><strong>Hodie</strong><BR />
 <audio controls>
   <source src="Hodie.mp3" type="audio/mpeg">
 </audio><BR/>
-File download: <a href="Hodie.mp3">Hodie.mp3</a> (10.5 MB)<p>
+File download: <a href="Hodie.mp3">Hodie.mp3</a> (10.5 MB)</p>
 
 <hr>
 
-<p><strong>Wallpaper</strong></p>
+<p><strong>Wallpaper</strong><BR />
 <audio controls>
   <source src="Wallpaper.mp3" type="audio/mpeg">
 </audio><BR/>
-File download: <a href="Wallpaper.mp3">Wallpaper.mp3</a> (10.5 MB)<p>
+File download: <a href="Wallpaper.mp3">Wallpaper.mp3</a> (10.5 MB)</p>
 
 <hr>
 
-<p><strong>Wrists and Ankles</strong></p>
+<p><strong>Wrists and Ankles</strong><BR />
 <audio controls>
   <source src="Wrists and Ankles.mp3" type="audio/mpeg">
 </audio><BR/>
-File download: <a href="Wrists and Ankles.mp3">Wrists and Ankles.mp3</a> (10.5 MB)<p>
+File download: <a href="Wrists and Ankles.mp3">Wrists and Ankles.mp3</a> (10.5 MB)</p>
+
+
+<p># # #</p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
@@ -69,12 +74,21 @@ function bgcolor(){
  function rndNum(){return Math.floor(Math.random()*(255-225+1))+225;} var rndColor = rndNum()+','+rndNum()+','+rndNum();
  jQuery('body').css('background','rgb('+rndColor+')');
 }
-
 bgcolor();
-
 var intervalId = window.setInterval(function(){
  bgcolor();
 }, 5000);
+
+/* make it so only one plays at a time */
+document.addEventListener('play', function(e){  
+ var audios = document.getElementsByTagName('audio');  
+ for(var i = 0, len = audios.length; i < len;i++){  
+   if(audios[i] != e.target){
+     audios[i].pause();
+     audios[i].currentTime = 0;
+   }  
+ }
+}, true);
 
 </script>
 </body>
