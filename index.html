@@ -55,8 +55,7 @@ h1,p {font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;}
 <p><audio controls>
   <source src="Triple Minuet.mp3" type="audio/mpeg">
 </audio></p>
-<p>File: <a href="Triple Minuet.mp3">Triple Minuet.mp3</a> (1.2 MB)<BR />
-(This isn't written up in the book; will update the book later.)</p>
+<p>File: <a href="Triple Minuet.mp3">Triple Minuet.mp3</a> (1.2 MB)</p>
 
 <hr>
 
@@ -103,7 +102,7 @@ document.addEventListener('play', function(e){
  for(var i = 0, len = audios.length; i < len;i++){  
    if(audios[i] != e.target){
      audios[i].pause();
-     audios[i].currentTime = 0;
+     //audios[i].currentTime = 0;
    }  
  }
 }, true);
