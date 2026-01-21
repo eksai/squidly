@@ -1,33 +1,47 @@
+<!DOCTYPE html>
 <html>
 <head>
+ <base target="_blank">
 <title>GarageBand from Squidly</title>
 <style>
-hr{
-  border: none;
-  height: 2px;
-  background-color: #aaa;
-  width: 350px;
-  margin-left:0;
-  }
-#main {width:500px;}
-body {background:rgb(216,216,216);
-h1,p {font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;}
+
+p {font-size:40px;text-align: center;}
+#thediv {width:100%;}
+#kcc {width:300px;height:300px;}
+#kcc:hover,.lock:hover {cursor:pointer;}
+#kccdiv {width:300px;height:300px; margin: 0 auto;
+         background:rgb(255,255,255);
+        }
+hr {border: none;
+    height: 2px;
+    background-color: #000;
+    width: 350px;
+    /* margin-left:0; */
+    }
+#mp3s{width:100%;display:none;background:rgb(0,100,100,0.1);}
+img {
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+#cover:hover {cursor:pointer;}
 
 </style>
 </head>
 <body>
+<div id="thediv">
+<a href="https://www.amazon.com/Squidly-Travesties-Literature-Jeff-Morin/dp/B0BMWKTNQK" ><img id="cover" src="squidly_cover.jpg" alt=""></a>
+<p><strong>Sound files for "GarageBand"</strong></p>
+<p>From chapter "Lyrics and Music," <a href="https://www.amazon.com/Squidly-Travesties-Literature-Jeff-Morin/dp/B0BMWKTNQK" ><i>Squidly</i> by Jeff Morin</a>.<BR />Read just those pages in <a href="SquidlyGarageBand.pdf">this PDF</a> (900K).</p>
 
-<h1>Sound files for "GarageBand"</h1>
-<div id="main">
-<p>From chapter "Lyrics and Music," <a href="https://www.amazon.com/Squidly-Travesties-Literature-Jeff-Morin/dp/B0BMWKTNQK" ><i>Squidly</i> (available on Amazon)</a>. Read those pages in <a href="SquidlyGarageBand.pdf">this PDF</a> (900K).</p>
-
-<p>NOTE: If you look at this page with your phone, you might need to pinch in to make the player visible.</p>
+<p>NOTE: If you look at this page with your phone,<BR />pinch in to make the player visible.</p>
 
 <audio>
  Your browser can't play these files. Use the file link to download.
 </audio>
 
-<p><strong>I Think I Club You</strong></p>
+<p>
+<BR /><strong>I Think I Club You</strong></p>
 <p><audio controls>
   <source src="I Think I Club You.mp3" type="audio/mpeg">
 </audio></p>
@@ -84,6 +98,7 @@ h1,p {font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;}
 
 <p># # #</p>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script>
 
