@@ -122,6 +122,15 @@ document.addEventListener('play', function(e){
  }
 }, true);
 
+/* reset to time 0 for ended audio */
+const audios2 = document.querySelectorAll("audio");
+audios2.forEach(audio => {
+  audio.addEventListener("ended", () => {
+    audio.currentTime = 0;
+  });
+});
+
+
 </script>
 </body>
 </html>
