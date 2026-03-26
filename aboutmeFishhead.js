@@ -1,3 +1,3 @@
 alert("Hello, World!")
-aboutme="See also amazon.com/author/jeffmorin";
+aboutme="See also <a href="http://amazon.com/author/jeffmorin">amazon.com/author/jeffmorin</a>";
 
